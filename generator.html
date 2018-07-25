@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Malplenia | 人物產生器</title>
+    <meta http-equiv='Content-Type' content='charset=UTF-8' />
+    <link rel='shortcut icon' href='images/favicon.ico' />
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css'>
+    <link rel='stylesheet' href='./style/style.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+</head>
+
+<body>
+    <br><br><br>
+    <center>
+        <h2>人物產生器</h2>
+        <br>人物產生器仍在開發階段，如有更多需求請至<a href="https://docs.google.com/spreadsheets/d/1Bi65i8jqS-qqngao4ZOilMNN4Sx-crXbzALX5UY3m0w/pubhtml">素材網站</a>搜尋 (MV版本)
+        <div class="featured" style="width:840px; height:440px;">
+            <div class="section3">
+                <a href="#" class="button" id="warning">使用規範</a><br>
+                <hr>
+                <b id="base">體型：樣式1</b><br><br>
+                <input type="range" value="0" min="0" max="1" onchange="changeBody(this.value)"> 顏色:
+                <input type="radio" name="skintone" value="0" onClick="changeSkin(this.value)" checked>
+                <input type="radio" name="skintone" value="7" onClick="changeSkin(this.value)">
+                <input type="radio" name="skintone" value="8" onClick="changeSkin(this.value)">
+                <input type="radio" name="skintone" value="9" onClick="changeSkin(this.value)">
+                <input type="radio" name="skintone" value="10" onClick="changeSkin(this.value)">
+                <input type="radio" name="skintone" value="11" onClick="changeSkin(this.value)">
+                <input type="radio" name="skintone" value="4" onClick="changeSkin(this.value)">
+                <input type="radio" name="skintone" value="5" onClick="changeSkin(this.value)">
+                <hr>
+                <b id="fHair">前髮：樣式1</b><br><br>
+                <input type="range" value="1" min="0" max="15" onchange="changefHair(this.value)" />顏色:
+                <input type="radio" name="fHairColor" value="0" onClick="changefHairColor(this.value)" checked>
+                <input type="radio" name="fHairColor" value="1" onClick="changefHairColor(this.value)">
+                <input type="radio" name="fHairColor" value="2" onClick="changefHairColor(this.value)">
+                <input type="radio" name="fHairColor" value="3" onClick="changefHairColor(this.value)">
+                <input type="radio" name="fHairColor" value="4" onClick="changefHairColor(this.value)">
+                <input type="radio" name="fHairColor" value="5" onClick="changefHairColor(this.value)">
+                <input type="radio" name="fHairColor" value="6" onClick="changefHairColor(this.value)">
+                <input type="radio" name="fHairColor" value="7" onClick="changefHairColor(this.value)">
+                <input type="radio" name="fHairColor" value="8" onClick="changefHairColor(this.value)">
+                <input type="radio" name="fHairColor" value="9" onClick="changefHairColor(this.value)">
+                <input type="radio" name="fHairColor" value="11" onClick="changefHairColor(this.value)">
+                <input type="radio" name="fHairColor" value="12" onClick="changefHairColor(this.value)">
+                <hr>
+                <b id="bHair">後髮：樣式1</b><br><br>
+                <input type="range" value="1" min="0" max="20" onchange="changebHair(this.value)" />顏色:
+                <input type="radio" name="bHairColor" value="0" onClick="changebHairColor(this.value)" checked>
+                <input type="radio" name="bHairColor" value="1" onClick="changebHairColor(this.value)">
+                <input type="radio" name="bHairColor" value="2" onClick="changebHairColor(this.value)">
+                <input type="radio" name="bHairColor" value="3" onClick="changebHairColor(this.value)">
+                <input type="radio" name="bHairColor" value="4" onClick="changebHairColor(this.value)">
+                <input type="radio" name="bHairColor" value="5" onClick="changebHairColor(this.value)">
+                <input type="radio" name="bHairColor" value="6" onClick="changebHairColor(this.value)">
+                <input type="radio" name="bHairColor" value="7" onClick="changebHairColor(this.value)">
+                <input type="radio" name="bHairColor" value="8" onClick="changebHairColor(this.value)">
+                <input type="radio" name="bHairColor" value="9" onClick="changebHairColor(this.value)">
+                <input type="radio" name="bHairColor" value="11" onClick="changebHairColor(this.value)">
+                <input type="radio" name="bHairColor" value="12" onClick="changebHairColor(this.value)">
+                <hr>
+                <b id="ears">耳朵：樣式1</b><br><br>
+                <input type="range" value="0" min="0" max="1" onchange="changeEars(this.value)" />
+                <hr>
+                <b id="eyes">眼睛：樣式1</b><br><br>
+                <input type="range" value="0" min="0" max="29" onchange="changeEyes(this.value)" />顏色:
+                <input type="radio" name="eyesColor" value="0" onClick="changeEyesColor(this.value)" checked>
+                <hr>
+                <b id="eyebrows">眉毛：樣式1</b><br><br>
+                <input type="range" value="0" min="0" max="27" onchange="changeEyebrows(this.value)" />
+                <hr>
+                <b id="nose">鼻子：樣式1</b><br><br>
+                <input type="range" value="0" min="0" max="11" onchange="changeNose(this.value)" />
+                <hr>
+                <b id="mouth">嘴巴：樣式1</b><br><br>
+                <input type="range" value="0" min="0" max="10" onchange="changeMouth(this.value)" />
+                <hr>
+                <b id="cloth">服裝：無</b><br><br>
+                <input type="range" value="0" min="0" max="49" onchange="changeClothes(this.value)" />
+                <hr>
+                <a href="#" class="button" id="btn-download0" download="Avatar.png">儲存角色頭像</a><br><br>
+                <a href="#" class="button" id="btn-download1" download="Walk.png">儲存角色行走圖</a><br><br>
+                <a href="#" class="button" id="btn-download2" download="SV.png">儲存角色戰鬥圖</a><br>
+            </div>
+            <div class="section4"> <canvas id="generator">  </canvas></div>
+
+        </div>
+        <script language="JavaScript" src="generator.js"></script>
+    </center>
+
+    <div class="topnav">
+        <a id="logo" href="index.html"><img src="images/logo.png" height="36px"></a>
+        <div class="dropdown"><button class="dropbtn"> 進入遊戲 </button>
+            <div class="dropdown-content"><a href="game.html"> 探索指南 </a> <a href="https://ruxuanxu.github.io/Malplenia_Game/"> 開始遊戲 </a> <a href="download.html"> 下載專區 </a></div>
+        </div> <a href="about.html"> 企劃說明 </a>
+        <div class="dropdown"><button class="dropbtn"> 世界導覽 </button>
+            <div class="dropdown-content"><a href="area.html"> 世界觀 </a><a href="race.html"> 種族與職業 </a><a href="alien.html"> 異界生物 </a> </div>
+        </div> <a href="characters.html"> 居民列表 </a>
+        <div class="dropdown"><button class="dropbtn" style="background-color:rgba(255, 30, 30, 0.7)"> 創作申請 </button>
+            <div class="dropdown-content"><a href="rules.html"> 創作規則 </a><a href="generator.html"> 人物產生器 </a><a href="submit.html"> 填寫申請表 </a></div>
+        </div>
+        <div class="dropdown"><button class="dropbtn"> 聯絡官方 </button>
+            <div class="dropdown-content"><a href="team.html"> 開發團隊 </a><a href="credit.html"> 著作權歸屬 </a><a href="ask.html"> 問答集 </a></div>
+        </div>
+    </div>
+    <div class="footer">
+        <footer>Copyright © 2018 Malplenia</footer>
+    </div>
+</body>
+
+</html>

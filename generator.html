@@ -19,8 +19,9 @@
             <div class="section3">
                 <a href="#" class="button" id="warning">使用規範</a><br>
                 <hr>
-                <b id="base">體型：樣式1</b><br><br>
-                <input type="range" value="0" min="0" max="1" onchange="changeBody(this.value)"> 顏色:
+                <b id="base">體型：</b>
+                <input type="radio" name="body" value="0" onClick="changeBody(this.value)" checked>女性
+                <input type="radio" name="body" value="1" onClick="changeBody(this.value)">男性<br><br> 顏色:
                 <input type="radio" name="skintone" value="0" onClick="changeSkin(this.value)" checked>
                 <input type="radio" name="skintone" value="7" onClick="changeSkin(this.value)">
                 <input type="radio" name="skintone" value="8" onClick="changeSkin(this.value)">

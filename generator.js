@@ -72,8 +72,6 @@ function changeBody(id) {
     face.src = "images/generator/Base/face/base" + id + ".png";
     body.src = "images/generator/Base/body/base" + id + ".png";
     sv.src = "images/generator/Base/sv/base" + id + ".png";
-    var n = parseInt(id) + 1;
-    document.getElementById("base").innerHTML = "體型：樣式" + n;
     base = id;
     bHair0.src = "images/generator/bHair/face/bHair" + base + "_(" + hair + ").png";
 }
